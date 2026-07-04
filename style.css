@@ -1,1 +1,861 @@
-/* Romantic Website CSS */
+/* ===========================
+   Romantic Proposal Website
+   Part 2.1
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:linear-gradient(
+    180deg,
+    #091540 0%,
+    #2b1055 25%,
+    #6a3093 55%,
+    #ff758c 80%,
+    #ffd194 100%);
+
+    position:relative;
+
+}
+
+/* Overlay */
+
+.overlay{
+
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.25);
+z-index:1;
+
+}
+
+/* Intro */
+
+#intro{
+
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+z-index:20;
+width:90%;
+
+}
+
+.small{
+
+font-size:22px;
+color:#fff;
+letter-spacing:3px;
+margin-bottom:20px;
+
+}
+
+#typing{
+
+font-family:'Great Vibes',cursive;
+font-size:70px;
+color:white;
+text-shadow:
+0 0 10px #fff,
+0 0 25px hotpink,
+0 0 45px deeppink;
+
+min-height:120px;
+
+}
+
+#startBtn{
+
+margin-top:40px;
+padding:18px 45px;
+font-size:22px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+
+background:white;
+color:#ff2d75;
+
+transition:.4s;
+
+box-shadow:
+0 0 20px rgba(255,255,255,.5);
+
+}
+
+#startBtn:hover{
+
+transform:scale(1.08);
+
+background:#ff2d75;
+color:white;
+
+}
+
+/* Proposal */
+
+.hide{
+
+display:none;
+
+}
+
+#proposal{
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:30;
+
+}
+
+.glass{
+
+width:720px;
+
+max-width:92%;
+
+padding:50px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.25);
+
+text-align:center;
+
+color:white;
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.4);
+
+}
+
+.glass h2{
+
+font-family:'Great Vibes',cursive;
+
+font-size:55px;
+
+margin-bottom:25px;
+
+color:#fff;
+
+}
+/* ===========================
+   Romantic Proposal Website
+   Part 2.2
+=========================== */
+
+/* Message */
+
+.message{
+
+font-size:20px;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+color:#ffffff;
+
+text-shadow:0 0 5px rgba(255,255,255,.4);
+
+}
+
+/* Main Proposal */
+
+.glass h1{
+
+font-size:48px;
+
+line-height:1.4;
+
+margin-bottom:45px;
+
+font-weight:700;
+
+color:#fff;
+
+text-shadow:
+
+0 0 12px hotpink,
+
+0 0 30px deeppink;
+
+}
+
+/* Buttons */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:40px;
+
+position:relative;
+
+}
+
+/* YES */
+
+#yes{
+
+padding:16px 45px;
+
+border:none;
+
+border-radius:45px;
+
+font-size:22px;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#00d26a,#00ff95);
+
+color:white;
+
+font-weight:bold;
+
+transition:.35s;
+
+box-shadow:
+
+0 10px 25px rgba(0,255,128,.45);
+
+}
+
+#yes:hover{
+
+transform:scale(1.12);
+
+box-shadow:
+
+0 0 30px #00ff88,
+
+0 0 60px #00ff88;
+
+}
+
+/* NO */
+
+#no{
+
+padding:16px 45px;
+
+border:none;
+
+border-radius:45px;
+
+font-size:22px;
+
+cursor:pointer;
+
+background:linear-gradient(45deg,#ff2d55,#ff5b8a);
+
+color:white;
+
+font-weight:bold;
+
+position:relative;
+
+transition:.25s;
+
+box-shadow:
+
+0 10px 25px rgba(255,0,80,.45);
+
+}
+
+/* Success Screen */
+
+#success{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+
+linear-gradient(
+
+180deg,
+
+#1b0035,
+
+#3a0066,
+
+#ff4b91
+
+);
+
+z-index:50;
+
+}
+
+/* Success Card */
+
+.successBox{
+
+width:720px;
+
+max-width:92%;
+
+padding:60px;
+
+text-align:center;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+border:1px solid rgba(255,255,255,.25);
+
+color:white;
+
+box-shadow:
+
+0 25px 70px rgba(0,0,0,.45);
+
+}
+
+.successBox h1{
+
+font-size:60px;
+
+margin-bottom:20px;
+
+font-family:'Great Vibes',cursive;
+
+}
+
+.successBox h2{
+
+font-size:34px;
+
+margin-bottom:30px;
+
+}
+
+.successBox p{
+
+font-size:22px;
+
+line-height:1.8;
+
+}
+/* ===========================
+   Romantic Proposal Website
+   Part 2.3
+=========================== */
+
+/* Floating Hearts */
+
+#hearts{
+
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:2;
+
+}
+
+.heart{
+
+position:absolute;
+
+bottom:-50px;
+
+font-size:22px;
+
+animation:floatHeart linear infinite;
+
+opacity:.8;
+
+}
+
+@keyframes floatHeart{
+
+0%{
+
+transform:
+translateY(0)
+scale(.5)
+rotate(0deg);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:
+translateY(-120vh)
+scale(1.3)
+rotate(360deg);
+
+opacity:0;
+
+}
+
+}
+
+/* Falling Petals */
+
+#petals{
+
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+pointer-events:none;
+z-index:3;
+
+}
+
+.petal{
+
+position:absolute;
+
+top:-40px;
+
+font-size:20px;
+
+animation:petalFall linear infinite;
+
+opacity:.85;
+
+}
+
+@keyframes petalFall{
+
+0%{
+
+transform:
+translateY(-10vh)
+rotate(0deg);
+
+}
+
+100%{
+
+transform:
+translateY(120vh)
+translateX(120px)
+rotate(720deg);
+
+}
+
+}
+
+/* Stars */
+
+#stars{
+
+position:absolute;
+width:100%;
+height:100%;
+overflow:hidden;
+z-index:0;
+
+}
+
+.star{
+
+position:absolute;
+
+background:white;
+
+border-radius:50%;
+
+animation:twinkle 2s infinite;
+
+}
+
+@keyframes twinkle{
+
+0%{
+
+opacity:.2;
+
+}
+
+50%{
+
+opacity:1;
+
+box-shadow:
+
+0 0 10px white,
+
+0 0 20px white;
+
+}
+
+100%{
+
+opacity:.2;
+
+}
+
+}
+
+/* Fade Animation */
+
+.fade{
+
+animation:fadeIn 1.2s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Canvas */
+
+#confetti{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:999;
+
+}
+/* ===========================
+   Romantic Proposal Website
+   Part 2.4
+=========================== */
+
+/* Moon */
+
+body::before{
+
+content:"";
+
+position:absolute;
+
+top:70px;
+right:90px;
+
+width:150px;
+height:150px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:
+
+0 0 30px white,
+0 0 70px white,
+0 0 120px rgba(255,255,255,.7);
+
+opacity:.95;
+
+z-index:0;
+
+animation:moonGlow 4s infinite alternate;
+
+}
+
+@keyframes moonGlow{
+
+0%{
+
+transform:scale(1);
+
+box-shadow:
+
+0 0 30px white,
+0 0 70px white;
+
+}
+
+100%{
+
+transform:scale(1.08);
+
+box-shadow:
+
+0 0 50px white,
+0 0 120px white;
+
+}
+
+}
+
+/* Soft Background Glow */
+
+body::after{
+
+content:"";
+
+position:absolute;
+
+left:-200px;
+bottom:-200px;
+
+width:600px;
+height:600px;
+
+border-radius:50%;
+
+background:rgba(255,120,180,.18);
+
+filter:blur(90px);
+
+animation:bgMove 10s ease-in-out infinite alternate;
+
+z-index:0;
+
+}
+
+@keyframes bgMove{
+
+0%{
+
+transform:translateX(0);
+
+}
+
+100%{
+
+transform:translateX(120px)
+translateY(-70px);
+
+}
+
+}
+
+/* Floating Animation */
+
+.glass{
+
+animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+/* Pulse Button */
+
+#yes{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+#typing{
+
+font-size:48px;
+
+}
+
+.glass{
+
+padding:30px;
+
+}
+
+.glass h1{
+
+font-size:34px;
+
+}
+
+.glass h2{
+
+font-size:40px;
+
+}
+
+.message{
+
+font-size:17px;
+
+line-height:1.7;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+gap:22px;
+
+}
+
+#yes,#no{
+
+width:210px;
+
+}
+
+.successBox{
+
+padding:30px;
+
+}
+
+.successBox h1{
+
+font-size:44px;
+
+}
+
+.successBox h2{
+
+font-size:24px;
+
+}
+
+.successBox p{
+
+font-size:18px;
+
+}
+
+}
+
+/* Smooth Fade */
+
+#intro,
+#proposal,
+#success{
+
+animation:fadeIn 1.4s;
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+width:0;
+
+}
